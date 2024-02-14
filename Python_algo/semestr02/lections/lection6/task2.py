@@ -4,7 +4,8 @@
 второго слова совпадает с последней  буквой первого, и слово "ОШИБКА"
 в противном случае.
 """
-city1 = input().strip().lower()
-city2 = input().strip().lower()
+city1 = input().lower().strip(" ъьы")
+city2 = input().lower().strip()
 ans = "Дальше" if city1[-1] == city2[0] else "Ошибка"
 print(ans)
+

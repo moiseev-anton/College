@@ -6,17 +6,16 @@ s = input("Введите строку: ").lower()
 
 first_h = last_h = -1
 
-for i, ch in enumerate(s):
-    if ch == 'h':
+for i in range(len(s)):
+    if s[i] == 'h':
         first_h = i
         break
 
-for i, ch in enumerate(s[::-1]):
-    if ch == 'h':
+for i in range(len(s)-1, -1, -1):
+    if s[i] == 'h':
         last_h = i
         break
 
-last_h = len(s) - last_h - 1
 if first_h == last_h:
     result = s
 else:
